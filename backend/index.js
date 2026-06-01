@@ -36,6 +36,9 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('CF Analyser Backend Running');
+});
 app.use('/api/user', userRoutes);
 app.use('/api/contests', contestRoutes);
 app.use('/api/problems', problemRoutes);
